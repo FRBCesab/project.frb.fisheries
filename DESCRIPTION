@@ -10,7 +10,8 @@ Imports:
     here,
     readr,
     stringi,
-    stringr
+    stringr,
+    taxize
 ByteCompile: true
 Encoding: UTF-8
 LazyData: true
