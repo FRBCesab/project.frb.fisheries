@@ -1,30 +1,48 @@
 ---
-title: "Untitled"
-author: "Lola Gilbert"
+title: "__Project Fisheries - FRB Cesab training__"
+author: "Céline __Albert__, Lola __Gilbert__,  Samuel __Charberet__"
 date: "02/12/2021"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+The project is available on _[github](https://github.com/samuelcharberet/project.frb.fisheries)_
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+## 1. R work environment
+For this project we used:  
+* renv  
+* Rmarkdown  
+* ggplot2  
+* Targets  
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## 2. Data
+### 2.1. Data extracted  
 
-```{r cars}
-summary(cars)
-```
+* __C, N, P__ from Jabot, F. et al., (2020): Dataset for the article "Body stoichiometry of heterotrophs: assessing drivers of interspecific variations in elemental composition". figshare. Dataset. https://doi.org/10.6084/m9.figshare.13366310.v1  
+* __Tonnage__ from _Sea Around Us_ We downloaded data for the Barents Sea area on the Website:  https://www.seaaroundus.org/
 
-## Including Plots
+### 2.2. Data manipulation  
+Having two different dataset has required to join them. However, the species name were not exactly noted the same way on the two documents. Therefore we had to do some cleaning/filetering on both datasets. 
 
-You can also embed plots, for example:
+
+### 2.3. Final dataset  
+Our final dataset contains:  
+* C  
+* N  
+* P  
+* Species  
+* Tonnage  
+
+
+## 3. Analyses and vizualisation
+
 
 ```{r pressure, echo=FALSE}
 plot(pressure)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
