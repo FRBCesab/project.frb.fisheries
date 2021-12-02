@@ -14,7 +14,7 @@ add_gbif_backbone_taxonomy = function(dataframe, speciescolumn) {
   species_column_index = which(names(dataframe) == speciescolumn_name) # the column number
 
   dataframe[, speciescolumn] = tolower(dataframe[, speciescolumn])
-  dataframe[, speciescolumn] = gsub(" ", "_", dataframe[, speciescolumn])
+  dataframe[, speciescolumn] = gsub("_", " ", dataframe[, speciescolumn])
   dataframe = dataframe[which(dataframe[, speciescolumn] != ''), ] # remove rows where there are no given species name
   list_sp = unique(dataframe[, speciescolumn])
   list_data_gbif = taxize::get_gbifid_(list_sp) # we download information from the GBIF Backbone Taxonomy
@@ -114,13 +114,14 @@ add_gbif_backbone_taxonomy = function(dataframe, speciescolumn) {
   # Add columns to the data table
 
   dataframe[, colnames(useful_data_gbif)] = NA
+  dataframe[, colnames(useful_data_gbif)] = NA
 
 
   # Standardize species name
 
   useful_data_gbif$species_gbif = tolower(useful_data_gbif$species_gbif)
-  useful_data_gbif$species_gbif = gsub(" ", "_", useful_data_gbif$species_gbif)
-
+  useful_data_gbif$species_gbif = gsub("_", "", useful_data_gbif$species_gbif)
+  dataframe[, speciescolumn]= gsub("_", " ", dataframe[, speciescolumn])
   # A for loop to combine the GBIF data with the datatable
 
   for (i in 1:nrow(dataframe)) {
