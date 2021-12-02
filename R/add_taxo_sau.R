@@ -13,7 +13,6 @@ add_taxo_sau = function(data_sau_clean) {
 
   list_sp_sau_ts = unique(data_sau_clean$scientific_name)
   list_sp_sau_gbif = unique(gbif_sau$species_gbif)
-  colnames(gbif_sau) = paste0(colnames(gbif_sau), '_gbif')
   data_sau_clean[, colnames(gbif_sau)] = NA
 
   for (i in 1:length(list_sp_sau_gbif)) {
