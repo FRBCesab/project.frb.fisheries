@@ -17,7 +17,7 @@ add_gbif_backbone_taxonomy = function(dataframe, speciescolumn) {
   dataframe[, speciescolumn] = gsub(" ", "_", dataframe[, speciescolumn])
   dataframe = dataframe[which(dataframe[, speciescolumn] != ''), ] # remove rows where there are no given species name
   list_sp = unique(dataframe[, speciescolumn])
-  list_data_gbif = get_gbifid_(list_sp) # we download information from the GBIF Backbone Taxonomy
+  list_data_gbif = taxize::get_gbifid_(list_sp) # we download information from the GBIF Backbone Taxonomy
 
   # we search for the maximum number of columns in all the dataframes in the list data gbif
   list_ncol = NULL
