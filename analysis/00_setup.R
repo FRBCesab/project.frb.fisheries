@@ -22,7 +22,7 @@ dir.create("R")
 dir.create("manuscript")
 dir.create("Image")
 
-# Create a import data function
+# Create a load data function
 file.create("R/import_data.R")
 file.rename(from = "R/import_data.R",
             to = "R/load_data.R")
@@ -39,3 +39,9 @@ library(ghibli)
 # display palettes w/ names
 par(mfrow=c(9,3))
 for(i in names(ghibli_palettes)) print(ghibli_palette(i))
+
+# create Rmarkdown file
+file.create("manuscript/ProjectFisheries.Rmd")
+
+# create R function script to merge both data files
+file.create("R/merge_clean_data_files.R")

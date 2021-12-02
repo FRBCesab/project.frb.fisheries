@@ -6,6 +6,13 @@
 # Script with functions to load the two datasets
 ##########################################################
 
+
+
+#' @title To load Sea Around Us data
+#'
+#'
+#' @return raw data tibble
+
 load_SAU <- function() {
   data_SAU <- readr::read_csv(
     here::here("data",
@@ -16,10 +23,16 @@ load_SAU <- function() {
   data_SAU
 }
 
+
+#' @title Clean up Sea Around Us tibble
+#'
+#'
+#' @return cleaned Sea Around Us tibble
+
 clean_SAU <- function(data_tibble) {
   SAU_clean <- data_tibble |>
     dplyr::select(area_name, year, functional_group,
-                  common_name,
+                  common_name, scientific_name,
                   commercial_group, fishing_entity,
                   fishing_sector, catch_type, gear_type,
                   end_use_type, landed_value) # select useful columns
