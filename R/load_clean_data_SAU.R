@@ -35,13 +35,15 @@ clean_SAU <- function(data_tibble) {
                   common_name, scientific_name,
                   commercial_group, fishing_entity,
                   fishing_sector, catch_type, gear_type,
-                  end_use_type, landed_value) # select useful columns
+                  end_use_type, landed_value) |> # select useful columns
     dplyr::filter(stringr::str_detect(scientific_name, " ")) |>
     dplyr::filter(!(
       stringr::str_detect(scientific_name, "not identified")),
       !(
         stringr::str_detect(scientific_name, "Miscellaneous"))
-      ) # keep only when identified up to species level
+      ) |> # keep only when identified up to species level
+    dplyr::mutate(scientific_name = stringr::str_to_lower(scientific_name)
+                  )
 
     SAU_clean
 }
