@@ -6,16 +6,15 @@
 #graph with to Y axis
 ###########################################
 
-ggplot(data, aes(x=year)) +
+SAU_data<-load_SAU()
+cleaned_Data<-clean_SAU(SAU_data)
 
-  geom_line( aes(y=tonnage)) +
-  geom_line( aes(y=C)) +
+GHS<-wrangling_ghs_data()
 
-  scale_y_continuous(
+merged<-merge_files(cleaned_Data, GHS)
 
-    # Features of the first axis
-    name = "Tonnage",
+str(merged)
 
-    # Add a second axis and specify its features
-    sec.axis = sec_axis(XXX, name="C,N,P")
-  )
+ggplot(merged) +
+  geom_point(aes(x=year, y = landed_value))
+
