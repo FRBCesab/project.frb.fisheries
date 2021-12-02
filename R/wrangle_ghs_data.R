@@ -8,7 +8,7 @@
 #'
 wrangling_ghs_data <- function (ghs_data) {
   data <-
-    readr::read_csv(here::here("data", "wwf-wildfinder", "wildfinder-mammals_list.csv"))
+    readr::read_csv(here::here("data", "ghs", "Global_heterotrophs_stoichio_v5"))
   return(data)
 
 }
