@@ -30,3 +30,12 @@ file.rename(from = "R/import_data.R",
 # Use the renv package
 renv::init()
 
+#package ghibli
+install.packages('ghibli')
+
+#load package
+library(ghibli)
+
+# display palettes w/ names
+par(mfrow=c(9,3))
+for(i in names(ghibli_palettes)) print(ghibli_palette(i))
