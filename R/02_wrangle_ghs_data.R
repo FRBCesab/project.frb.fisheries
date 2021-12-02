@@ -80,9 +80,9 @@ wrangling_ghs_data <- function () {
   }
 
   # clean up to prepare for join for SAU data
-  ghs_data_aggregated <- ghs_data_aggregated |>
+  ghs_data_aggregated <- ghs_data_aggregated %>%
     # change column name with latin name to have the same as SAU data
-    dplyr::rename(scientific_name = species_binomial) |>
+    dplyr::rename(scientific_name = species_binomial) %>%
     # select only useful columns
     dplyr::select(scientific_name,
                   c_mean, n_mean, p_mean,
