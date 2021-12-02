@@ -28,14 +28,16 @@ NorwayUKRussia<-filter(merged, fishing_entity==c("Norway", "United Kingdom", "Ru
           panel.grid.major = element_line(size = 0.5, linetype = 'solid', colour = "grey95"),
            panel.grid.minor = element_line(size = 0.25, linetype = 'solid', colour = "white"),
           axis.title.x = element_text(size = 9, face = "bold"),
-                   axis.text.x = element_text(size=9,angle = 60, hjust=1),
+          axis.text.x = element_text(size=9, angle = 60, hjust=1),
           strip.background=element_rect(colour="grey90", fill="grey95"),
           axis.title.y = element_text(size = 9, face = "bold"),
            axis.text.y = element_text(size=9))+
     facet_wrap(.~fishing_entity, nrow = 3)+
-    scale_fill_manual(name = "Fishing entity", values=c("#999999", "#E69F00", "#56B4E9"))+
-    geom_point(aes(x = year, y = c_mean),size = 2)+
-    scale_y_continuous("Landed  value", sec.axis = sec_axis(~ . /35000000 , name = "Carbone (C)"))
+    scale_fill_manual(name = "Fishing entity", values=c("#999999", "#E69F00", "#56B4E9"))
 
+#### de ce que je vois des données C ou N, on ne peut pas faire du temporel... Check the following graph.
+  #Les valeurs se repètement d'une année à l'autre
 
-summary(merged$c_mean)
+  ggplot(NorwayUKRussia,aes(year, c_mean)) +
+    geom_point()+
+    ylab ("Carcone (C)")+xlab ("Year")
