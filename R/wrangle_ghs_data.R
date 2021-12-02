@@ -7,19 +7,18 @@
 #'
 #'
 wrangling_ghs_data <- function () {
-
   # Read the data
   ghs_data <-
     readr::read_delim(here::here("data", "ghs", "Global_heterotroph_stoichio_v5.csv"),
                       delim = "\t")
   ghs_data = data.frame(ghs_data)
   # clean column names
-  names(ghs_data)= tolower(names(ghs_data))
-  character_columns= which(sapply(ghs_data, class) == 'character')
-  ghs_data[,character_columns] = lapply(data.frame(ghs_data[,character_columns]), stringi::stri_trans_tolower)
+  names(ghs_data) = tolower(names(ghs_data))
+  character_columns = which(sapply(ghs_data, class) == 'character')
+  ghs_data[, character_columns] = lapply(data.frame(ghs_data[, character_columns]), stringi::stri_trans_tolower)
 
   # Keeps only marine species
-  ghs_data = ghs_data[which(ghs_data$habitat=="marine"), ]
+  ghs_data = ghs_data[which(ghs_data$habitat == "marine"),]
 
   # As we don't want to compute averages of values of different statistical status
   # (averages of unknown n, unique observations) have different weights, we will have to choose one data per species instead
@@ -48,10 +47,10 @@ wrangling_ghs_data <- function () {
   for (i in 1:length(list_sp)) {
     lines_species = which(ghs_data$species_binomial == list_sp[i]) # select the lines of the current species
     if (length(lines_species) == 1) {
-      ghs_data_aggregated = dplyr::bind_rows(ghs_data_aggregated, ghs_data[lines_species,])
+      ghs_data_aggregated = dplyr::bind_rows(ghs_data_aggregated, ghs_data[lines_species, ])
     } # if there is only on row for the current species, we keep that row
     else {
-      combined_row = ghs_data[lines_species[1],]
+      combined_row = ghs_data[lines_species[1], ]
 
       for (j in col_choice) {
         if (sum(mat_na[lines_species, j]) == 0) {
@@ -59,17 +58,17 @@ wrangling_ghs_data <- function () {
         }
         else if (sum(mat_na[lines_species, j]) == 1) {
           combined_row[1, j] = ghs_data[lines_species[which(mat_na[lines_species, j] ==
-                                                             1)], j]
+                                                              1)], j]
         }
         else if (sum(mat_na[lines_species, j]) > 1) {
           for (k in lines_species) {
             row_data_nb[k] = sum(mat_na[k, col_choice])
           }
           combined_row[1, j] = ghs_data[lines_species[which(row_data_nb[lines_species] ==
-                                                             max(row_data_nb[lines_species]))][1], j]
+                                                              max(row_data_nb[lines_species]))][1], j]
         }
       }
-      ghs_data_aggregated = dplyr::bind_rows(ghs_data_aggregated, combined_row[1,])
+      ghs_data_aggregated = dplyr::bind_rows(ghs_data_aggregated, combined_row[1, ])
     }
   }
 
