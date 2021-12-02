@@ -1,16 +1,18 @@
 # _targets.R file
 
 library(targets)
-source("R/functions.R")
+# We source all functions contained in all files in the R directory
+lapply(list.files(here::here("R"), recursive = TRUE, full.names = T), source)
+
 
 list(
-  tar_target(raw_data_file, "data/raw_data.csv", format = "file"
-  ), #make the workflow depends on the raw data file
-  tar_target(raw_data, read_csv(raw_data_file)
-  ), #read the data, return a data.frame
-  tar_target(data,
-             raw_data %>% filter(!is.na(Ozone))
-  ), #transform the data
-  tar_target(hist, create_plot(data)), #explore the data (custom function)
+  tar_target(data_sau, load_SAU()),
+  # reads the Sea Around Us data,  returns a data.frame
+  tar_target(data_ghs, wrangle_ghs_data()),
+  #read the Global heterotroph stoichiometry data, returns a data.frame
+  tar_target(dat_seaghs, the_function_that_merges),
+  # merge both datasets
+  tar_target(hist, create_plot(data)),
+  #explore the data (custom function)
   tar_target(fit, lm(Ozone ~ Wind + Temp, data)) #model the data
 )
