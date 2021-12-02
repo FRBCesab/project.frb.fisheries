@@ -45,3 +45,7 @@ file.create("manuscript/ProjectFisheries.Rmd")
 
 # create R function script to merge both data files
 file.create("R/merge_clean_data_files.R")
+
+# create script to run at the end to update DESCRIPTION file with
+# all packages used
+file.create("analysis/update_description.R")
