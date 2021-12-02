@@ -75,6 +75,15 @@ wrangling_ghs_data <- function () {
     }
   }
 
-  return(ghs_data_aggregated)
+  # clean up to prepare for join for SAU data
+  ghs_data_aggregated <- ghs_data_aggregated |>
+    # change column name with latin name to have the same as SAU data
+    dplyr::rename(scientific_name = species_binomial) |>
+    # select only useful columns
+    dplyr::select(scientific_name,
+                  c_mean, n_mean, p_mean,
+                  cn_ratio, cp_ratio, np_ratio)
+
+  ghs_data_aggregated
 
 }
