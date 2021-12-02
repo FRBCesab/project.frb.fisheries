@@ -73,6 +73,6 @@ wrangling_ghs_data <- function () {
     }
   }
 
-  return(ghs_data)
+  return(ghs_data_aggregated)
 
 }
