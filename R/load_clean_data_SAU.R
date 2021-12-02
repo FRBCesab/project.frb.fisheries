@@ -16,4 +16,19 @@ load_SAU <- function() {
   data_SAU
 }
 
+clean_SAU <- function(data_tibble) {
+  SAU_clean <- data_tibble |>
+    dplyr::select(area_name, year, functional_group,
+                  common_name,
+                  commercial_group, fishing_entity,
+                  fishing_sector, catch_type, gear_type,
+                  end_use_type, landed_value) # select useful columns
+    dplyr::filter(stringr::str_detect(scientific_name, " ")) |>
+    dplyr::filter(!(
+      stringr::str_detect(scientific_name, "not identified")),
+      !(
+        stringr::str_detect(scientific_name, "Miscellaneous"))
+      ) # keep only when identified up to species level
 
+    SAU_clean
+}
