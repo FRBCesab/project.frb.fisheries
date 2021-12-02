@@ -19,4 +19,4 @@ rcompendium::add_dependencies()
 
 # one automatic with package attachment but
 # it looks like some are missing
-attachment::att_amend_desc()
+# attachment::att_amend_desc()
