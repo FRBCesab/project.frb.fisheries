@@ -1,6 +1,6 @@
 ---
 title: "__Project Fisheries - FRB Cesab training__"
-author: "Céline __Albert__, Lola __Gilbert__,  Samuel __Charberet__"
+author: "Céline __Albert__,  Samuel __Charberet__, Lola __Gilbert__"
 date: "02/12/2021"
 output:
   pdf_document: default
@@ -14,6 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 The project is available on _[github](https://github.com/samuelcharberet/project.frb.fisheries)_
 
 ## 1. R work environment
+
 For this project we used:  
 * renv  
 * Rmarkdown  
@@ -23,21 +24,25 @@ For this project we used:
 ## 2. Data
 ### 2.1. Data extracted  
 
-* __C, N, P__ from Jabot, F. et al., (2020): Dataset for the article "Body stoichiometry of heterotrophs: assessing drivers of interspecific variations in elemental composition". figshare. Dataset. https://doi.org/10.6084/m9.figshare.13366310.v1  
+* __Carbone (C), Nitrogen (N), Phosphorus (P)__ content (% of dry mass) from Jabot, F. et al., (2020): Dataset for the article "Body stoichiometry of heterotrophs: assessing drivers of interspecific variations in elemental composition". figshare. Dataset. https://doi.org/10.6084/m9.figshare.13366310.v1  
+
 * __Tonnage__ from _Sea Around Us_ We downloaded data for the Barents Sea area on the Website:  https://www.seaaroundus.org/
 
 ### 2.2. Data manipulation  
+
 Having two different dataset has required to join them. However, the species name were not exactly noted the same way on the two documents. Therefore we had to do some cleaning/filetering on both datasets. 
 
 
 ### 2.3. Final dataset  
-Our final dataset contains:  
-* C  
-* N  
-* P  
-* Species  
-* Tonnage  
 
+Our final dataset contains:  
+* Carbone (C)  
+* Nitrogen (N)  
+* Phosphorus (P)  
+* Species (n species of fishes)  
+* Tonnage  
+* Countries  
+* Type of gear  
 
 ## 3. Analyses and vizualisation
 
@@ -45,4 +50,8 @@ Our final dataset contains:
 ```{r pressure, echo=FALSE}
 plot(pressure)
 ```
+
+
+## 4. Bibliography
+
 
