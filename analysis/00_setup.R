@@ -49,3 +49,8 @@ file.create("R/merge_clean_data_files.R")
 # create script to run at the end to update DESCRIPTION file with
 # all packages used
 file.create("analysis/update_description.R")
+
+# order scripts with numbers
+file.rename("R/load_clean_data_SAU.R", "R/01_load_clean_data_SAU.R")
+file.rename("R/wrangle_ghs_data.R", "R/02_wrangle_ghs_data.R")
+file.rename("R/merge_clean_data_files.R", "R/03_merge_clean_data_files.R")
