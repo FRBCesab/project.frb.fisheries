@@ -18,6 +18,10 @@ wrangling_ghs_data <- function () {
   character_columns <- which(sapply(ghs_data, class) == 'character')
   ghs_data[,character_columns] <- lapply(data.frame(ghs_data[,character_columns]), stringi::stri_trans_tolower)
 
+
+  # Keeps only species
+  ghs_data <- ghs_data[!is.na(ghs_data$species), ]
+
   # Keeps only marine species
   ghs_data <- ghs_data[which(ghs_data$habitat=="marine"), ]
 

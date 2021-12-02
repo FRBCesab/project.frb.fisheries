@@ -39,31 +39,31 @@ add_gbif_backbone_taxonomy = function(dataframe, speciescolumn) {
     exact_rows = which(list_data_gbif[[i]]$matchtype == "EXACT")
     fuzzy_rows = which(list_data_gbif[[i]]$matchtype == "FUZZY")
     if (nrow(list_data_gbif[[i]]) == 0) {
-      data_gbif = bind_rows(data_gbif, ligne_na)
+      data_gbif = dplyr::bind_rows(data_gbif, ligne_na)
     }
     else if (nrow(list_data_gbif[[i]]) == 1) {
-      data_gbif = bind_rows(data_gbif, list_data_gbif[[i]])
+      data_gbif = dplyr::bind_rows(data_gbif, list_data_gbif[[i]])
     }
     else if (nrow(list_data_gbif[[i]]) > 1) {
       if (length(intersect(accepted_rows, exact_rows)) > 0) {
         max_conf = which(list_data_gbif[[i]][intersect(accepted_rows, exact_rows),]$confidence ==
                            max(list_data_gbif[[i]][intersect(accepted_rows, exact_rows),]$confidence))[1]
-        data_gbif = bind_rows(data_gbif, list_data_gbif[[i]][max_conf, ])
+        data_gbif = dplyr::bind_rows(data_gbif, list_data_gbif[[i]][max_conf, ])
       }
       else if (length(intersect(synonym_rows, exact_rows)) > 0) {
         max_conf = which(list_data_gbif[[i]][intersect(synonym_rows, exact_rows),]$confidence ==
                            max(list_data_gbif[[i]][intersect(synonym_rows, exact_rows),]$confidence))[1]
-        data_gbif = bind_rows(data_gbif, list_data_gbif[[i]][max_conf, ])
+        data_gbif = dplyr::bind_rows(data_gbif, list_data_gbif[[i]][max_conf, ])
       }
       else if (length(intersect(accepted_rows, fuzzy_rows)) > 0) {
         max_conf = which(list_data_gbif[[i]][intersect(accepted_rows, fuzzy_rows),]$confidence ==
                            max(list_data_gbif[[i]][intersect(accepted_rows, fuzzy_rows),]$confidence))[1]
-        data_gbif = bind_rows(data_gbif, list_data_gbif[[i]][max_conf, ])
+        data_gbif = dplyr::bind_rows(data_gbif, list_data_gbif[[i]][max_conf, ])
       }
       else if (length(intersect(synonym_rows, fuzzy_rows)) > 0) {
         max_conf = which(list_data_gbif[[i]][intersect(synonym_rows, fuzzy_rows),]$confidence ==
                            max(list_data_gbif[[i]][intersect(synonym_rows, fuzzy_rows),]$confidence))[1]
-        data_gbif = bind_rows(data_gbif, list_data_gbif[[i]][max_conf, ])
+        data_gbif = dplyr::bind_rows(data_gbif, list_data_gbif[[i]][max_conf, ])
       }
     }
   }
