@@ -1,6 +1,11 @@
 
-Downloaded 02-December-2021
+Downloaded 02-December-2021 from
+http://www.seaaroundus.org/data/#/lme/20?chart=catch-chart&dimension=taxon&measure=tonnage&limit=10
 
+Sea Around Us data base --> Tools&Data --> Basic Search --> LME --> Barents Sea (on map) --> download data
+
+
+Information given with the data:
 CATCH DATA, STOCK STATUS, MARINE TROPHIC INDEX, MULTINATIONAL FOOTPRINT, AND ASSOCIATED METHODS
 
 Data version 48.0
