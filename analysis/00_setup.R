@@ -21,6 +21,9 @@ dir.create("analysis")
 dir.create("R")
 dir.create("manuscript")
 
-# Use the renv package
+# Create a import data function
+file.create("R/import_data.R")
 
+# Use the renv package
 renv::init()
+
