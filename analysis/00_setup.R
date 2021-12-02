@@ -20,6 +20,7 @@ dir.create("outputs")
 dir.create("analysis")
 dir.create("R")
 dir.create("manuscript")
+dir.create("Image")
 
 # Create a import data function
 file.create("R/import_data.R")
