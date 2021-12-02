@@ -13,9 +13,9 @@
 #'
 #' @return unique tibble to work on
 merge_files <- function(tibble_SAU, tibble_CNP) {
-  data <- tibble_SAU |>
+  data <- tibble_SAU %>%
     # join the two tibbles
-    dplyr::left_join(tibble_CNP, by = "scientific_name") |>
+    dplyr::left_join(tibble_CNP, by = "scientific_name") %>%
     dplyr::filter(!is.na(c_mean))
 
   data
@@ -44,3 +44,4 @@ format_merged <- function(tibble_merged) {
 
   data
 }
+
