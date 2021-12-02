@@ -20,3 +20,6 @@ dir.create("outputs")
 dir.create("analysis")
 dir.create("R")
 dir.create("manuscript")
+
+# first script with functions in R folder
+file.create("R/import_data.R")
