@@ -1,2 +1,4 @@
+^renv$
+^renv\.lock$
 ^project\.frb\.fisheries\.Rproj$
 ^\.Rproj\.user$

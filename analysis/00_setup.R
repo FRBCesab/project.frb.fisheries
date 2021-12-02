@@ -20,3 +20,7 @@ dir.create("outputs")
 dir.create("analysis")
 dir.create("R")
 dir.create("manuscript")
+
+# Use the renv package
+
+renv::init()
