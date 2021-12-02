@@ -23,12 +23,26 @@
       "Repository": "CRAN",
       "Hash": "cf6b206a045a684728c3267ef7596190"
     },
+    "farver": {
+      "Package": "farver",
+      "Version": "2.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "c98eb5133d9cb9e1622b8691487f11bb"
+    },
     "fastmap": {
       "Package": "fastmap",
       "Version": "1.1.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "77bd60a6157420d4ffa93b27cf6a58b8"
+    },
+    "ghibli": {
+      "Package": "ghibli",
+      "Version": "0.3.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "39e3667c4d972a0d3e2ae818aeafab7b"
     },
     "highr": {
       "Package": "highr",
@@ -57,6 +71,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "98138e0994d41508c7a6b84a0600cfcb"
+    },
+    "prismatic": {
+      "Package": "prismatic",
+      "Version": "1.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "a08df48bec022eac1ffa77543318bd33"
     },
     "renv": {
       "Package": "renv",
