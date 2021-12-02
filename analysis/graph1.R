@@ -17,19 +17,25 @@ str(merged)
 merged$year<- as.factor(merged$year)
 merged$fishing_entity<- as.factor(merged$fishing_entity)
 
-#Filter by countries with the highest landed values
+# Select by countries with the highest landed values
+#
+NorwayUKRussia<-filter(merged, fishing_entity==c("Norway", "United Kingdom", "Russian Federation"))
+
+  ggplot(NorwayUKRussia,aes(year, landed_value, fill=fishing_entity)) +
+  geom_bar(stat = "identity")+
+  ylab ("Landed value")+xlab ("Year")+
+    theme(panel.background = element_rect(fill = "white", colour = "white"),
+          panel.grid.major = element_line(size = 0.5, linetype = 'solid', colour = "grey95"),
+           panel.grid.minor = element_line(size = 0.25, linetype = 'solid', colour = "white"),
+          axis.title.x = element_text(size = 9, face = "bold"),
+                   axis.text.x = element_text(size=9,angle = 60, hjust=1),
+          strip.background=element_rect(colour="grey90", fill="grey95"),
+          axis.title.y = element_text(size = 9, face = "bold"),
+           axis.text.y = element_text(size=9))+
+    facet_wrap(.~fishing_entity, nrow = 3)+
+    scale_fill_manual(name = "Fishing entity", values=c("#999999", "#E69F00", "#56B4E9"))+
+    geom_point(aes(x = year, y = c_mean),size = 2)+
+    scale_y_continuous("Landed  value", sec.axis = sec_axis(~ . /35000000 , name = "Carbone (C)"))
 
 
-  ggplot(merged,aes(year, landed_value)) +
-  geom_bar(aes(fill=fishing_entity),stat = "identity")+
-  ylab ("Landed value")+
-  theme(strip.text.x = element_text(size=11))+
-  theme(panel.background = element_rect(fill = "grey92", colour = "white"),
-        panel.grid.major = element_line(size = 0.5, linetype = 'solid',
-                                        colour = "white"),
-        panel.grid.minor = element_line(size = 0.25, linetype = 'solid',
-                                        colour = "white"),axis.title.x = element_text(size = 9, face = "bold"),
-        axis.text.x = element_text(size=9,angle = 60, hjust=1))+
-  theme(axis.title.y = element_text(size = 9, face = "bold"), axis.text.y = element_text(size=9))+
-  xlab ("Year")+ facet_wrap(.~fishing_entity)
-
+summary(merged$c_mean)
