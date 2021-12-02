@@ -6,6 +6,13 @@
 # Script with functions to load the two datasets
 ##########################################################
 
+
+
+#' @title To load Sea Around Us data
+#'
+#'
+#' @return raw data tibble
+
 load_SAU <- function() {
   data_SAU <- readr::read_csv(
     here::here("data",
@@ -15,6 +22,12 @@ load_SAU <- function() {
 
   data_SAU
 }
+
+
+#' @title Clean up Sea Around Us tibble
+#'
+#'
+#' @return cleaned Sea Around Us tibble
 
 clean_SAU <- function(data_tibble) {
   SAU_clean <- data_tibble |>

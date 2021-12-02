@@ -39,3 +39,6 @@ library(ghibli)
 # display palettes w/ names
 par(mfrow=c(9,3))
 for(i in names(ghibli_palettes)) print(ghibli_palette(i))
+
+# create Rmarkdown file
+file.create("manuscript/ProjectFisheries.Rmd")
