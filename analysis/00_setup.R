@@ -24,6 +24,8 @@ dir.create("Image")
 
 # Create a import data function
 file.create("R/import_data.R")
+file.rename(from = "R/import_data.R",
+            to = "R/load_data.R")
 
 # Use the renv package
 renv::init()
