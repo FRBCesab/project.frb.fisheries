@@ -30,5 +30,8 @@ list(
   # make plots
   #tar_target(plot_landedvalue_species, Graph_barplot_2),
   #explore the data (custom function)
+<<<<<<< HEAD
+=======
 
+>>>>>>> 32a92449ee5dc4ee06bdd2863bf103f242595bc4
 )
