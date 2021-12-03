@@ -12,14 +12,8 @@ library(tidyverse)
 #'
 #' @return raw data tibble
 
-load_SAU <- function() {
-  data_SAU <- readr::read_csv(
-    here::here("data",
-               "SAU LME 20 v48-0 (1)",
-               "SAU LME 20 v48-0.csv")
-  )
-
-  data_SAU
+load_SAU <- function(pat) {
+  readr::read_csv(pat)
 }
 
 

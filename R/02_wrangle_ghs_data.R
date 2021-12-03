@@ -6,11 +6,9 @@
 #' @examples
 #'
 #'
-wrangling_ghs_data <- function () {
+wrangling_ghs_data <- function (pat) {
   # Read the data
-  ghs_data <-
-    readr::read_delim(here::here("data", "ghs", "Global_heterotroph_stoichio_v5.csv"),
-                      delim = "\t")
+  ghs_data <- readr::read_delim(pat)
   ghs_data <- data.frame(ghs_data)
   # clean column names
 

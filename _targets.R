@@ -13,25 +13,30 @@ lapply(list.files(here::here("R"),
 
 
 list(
-  # load and clean both data files
-  tar_target(data_sau,
+  # define data files
+  tar_target(data_sau_file,
              "data/SAU_LME_20_v48_0_1/SAU_LME_20_v48_0.csv",
              format = "file"), # Sea Around us data
-  #tar_target(data_ghs, wrangle_ghs_data()), # CNP data
+  tar_target(data_ghs_file,
+             "data/ghs/Global_heterotroph_stoichio_v5.csv",
+             format = "file"), # GHS data
+  # load data sau
+  tar_target(data_sau, load_SAU(data_sau_file)),
+  # clean data sau
+  tar_target(data_sau_clean, clean_SAU(data_sau)),
+  # load and clean ghs data
+  tar_target(data_ghs_clean, wrangling_ghs_data(data_ghs_file)),
   # update taxo on SAU and data with taxonomy data
-  tar_target(SAU_taxo, add_taxo_sau(data_sau))
-  # tar_target(GHS_taxo, add_gbif_backbone_taxonomy(
-  #   dataframe = data_ghs,
-  #   speciescolumn = "scientific_name")),
+  tar_target(SAU_taxo, add_taxo_sau(data_sau_clean)),
+  tar_target(GHS_taxo,
+             add_gbif_backbone_taxonomy(
+               dataframe = data_ghs_clean,
+               speciescolumn = "scientific_name")),
   # merge both datasets
-  #tar_target(dat_merged, merge_files(SAU_taxo, GHS_taxo)),
+  tar_target(dat_merged, merge_files(SAU_taxo, GHS_taxo)),
   # complete calculation of C, N, P
-  #tar_target(final_tibble, format_merged(dat_merged)),
+  tar_target(final_tibble, format_merged(dat_merged))
   # make plots
   #tar_target(plot_landedvalue_species, Graph_barplot_2),
   #explore the data (custom function)
-<<<<<<< HEAD
-=======
-
->>>>>>> 32a92449ee5dc4ee06bdd2863bf103f242595bc4
 )
