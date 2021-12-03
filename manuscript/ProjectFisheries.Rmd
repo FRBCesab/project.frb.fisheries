@@ -19,10 +19,11 @@ The project is available on _[github](https://github.com/samuelcharberet/project
 ## 1. R work environment
 
 For this project we used:  
-* renv  
-* Rmarkdown  
-* ggplot2  
-* Targets  
+
+* Targets to manage our workflow
+* renv to make our R environment reproducible
+* Rmarkdown to generate both this presentation and a Latex report
+* ggplot2  to visualize our data
 
 ## 2. Data
 ### 2.1. Data extracted  
@@ -30,6 +31,8 @@ For this project we used:
 * __Carbone (C), Nitrogen (N), Phosphorus (P)__ content (% of dry mass) from Jabot, F. et al., (2020): Dataset for the article "Body stoichiometry of heterotrophs: assessing drivers of interspecific variations in elemental composition". figshare. Dataset. https://doi.org/10.6084/m9.figshare.13366310.v1  
 ---
 * __Tonnage__ from _Sea Around Us_ We downloaded data for the Barents Sea area on the Website:  https://www.seaaroundus.org/
+
+* __Taxonomic data__ from the Global Biodiveristy Information Facility (GBIF)
 
 ### 2.2. Data manipulation  
 

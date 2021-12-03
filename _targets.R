@@ -37,6 +37,7 @@ list(
   # complete calculation of C, N, P
   tar_target(final_tibble, format_merged(dat_merged)),
   # make plots
-  tar_target(plot_landedval_sp, Graph_barplot_2(final_tibble))
+  tar_target(plot_landedval_sp, Graph_barplot_2(final_tibble)),
+  tar_target(plot_CNP_exp, graphCNP_export(final_tibble))
   #explore the data (custom function)
 )
