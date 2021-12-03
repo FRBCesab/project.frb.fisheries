@@ -22,4 +22,4 @@ format_merged|function|a4ce6ce5682e03b0||||||||||||||
 graph_barplot_ton|function|14bc84313e3c8c25||||||||||||||
 graphCNP_export|function|5167316cdbd4797f||||||||||||||
 add_taxo_sau|function|a8c55a6ceab0d05f||||||||||||||
-rmd_report|stem|28509589010baaaf|9ba9e8451847aa02|46f7c84d93ecb341|-234516627|manuscript/ProjectFisheries.html*manuscript/ProjectFisheries.Rmd|t18964.4755300668s||1941761|file|vector|||2.34||The visNetwork package is required.
+rmd_report|stem|b3eac609e1d2d181|9ba9e8451847aa02|46f7c84d93ecb341|-234516627|manuscript/ProjectFisheries.html*manuscript/ProjectFisheries.Rmd|t18964.4817183451s|003cf1196b0a7be6|4435009|file|vector|||4.09||

@@ -73,10 +73,10 @@ targets::tar_read(plot_CNP_exp)
 ## 4. Workflow 
 
 ### vizualisation of tar_visnetwork
-```{r  echo=FALSE}
-targets::tar_visnetwork()
 
-```
+<center>
+![](../analysis/Image/Tar_Vizualisation.png){width=80%}
+<center>
 
 ```{r  echo=FALSE}
 #tar_load()
