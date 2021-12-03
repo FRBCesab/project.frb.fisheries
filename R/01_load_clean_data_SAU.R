@@ -38,7 +38,7 @@ clean_SAU <- function(data_tibble) {
     dplyr::mutate(scientific_name = stringr::str_to_lower(scientific_name)
                   )
 
-    SAU_clean
+    return(SAU_clean)
 }
 
 
