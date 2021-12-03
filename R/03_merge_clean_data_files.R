@@ -30,7 +30,7 @@ merge_files <- function(tibble_SAU, tibble_CNP) {
 #'     export in C, N,P
 format_merged <- function(tibble_merged) {
   data <- tibble_merged |>
-    dplyr::mutate(# convert % dry mass means into dry weight concentrations
+    dplyr::mutate(# convert % dry mass means into wet weight concentrations
                   # with a 80% water content
                   # unit g/ton
                   c_g_per_t = (c_mean/5)*1e-2,
