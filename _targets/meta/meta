@@ -13,13 +13,15 @@ dat_merged|stem|d4326f5e3d8292e8|25ee7d3b527d4546|8b59b495ec4a5296|1607404680||t
 final_tibble|stem|69aabae1f672c2a6|2557a1e905a907ac|6706d14d8cad3e06|-721444567||t18964.4169417256s|e65efacdf0cc140e|446708|rds|vector|||0||
 plot_landedval_sp|stem|3aab396fb20353ff|6125d852d38aaf0b|bb4ea09ed61ff578|1938145938||t18964.5108892678s|7178ae289abaa380|1094388|rds|vector|||0.03||
 plot_CNP_exp|stem|6a8307466ba55d54|0c3532631b1b13f2|b12044b7ba023bc5|-356950905||t18964.510903041s|7cbb34ddde2b39fd|1558622|rds|vector|||0.05||
+plot_flanded_nb_countries|stem|e7087616a0342e1d|6c787926a5999555|9ed06a834768136c|-1767060065||t18964.5459463502s|a7461b3ba4e8e2a6|484687|rds|vector|||0.03||
 clean_SAU|function|f6d75d7c77364621||||||||||||||
 merge_files|function|6490c0f4de120bb5||||||||||||||
 add_gbif_backbone_taxonomy|function|1abdb1a67200f6db||||||||||||||
+graphton_nb_countries|function|5b5800711e6370a7||||||||||||||
 wrangling_ghs_data|function|f60ea7acdac4a04d||||||||||||||
 load_SAU|function|c9a558d8522741e0||||||||||||||
 format_merged|function|a4ce6ce5682e03b0||||||||||||||
 graph_barplot_ton|function|4166acce3ff2bba3||||||||||||||
 graphCNP_export|function|9bf9e3bf0cfba285||||||||||||||
 add_taxo_sau|function|a8c55a6ceab0d05f||||||||||||||
-rmd_report|stem|bebcf138c544f807|d048233b906c1e96|ea389695f7c61c02|-234516627|manuscript/ProjectFisheries.html*manuscript/ProjectFisheries.Rmd|t18964.5419648584s|19a66c14abffd235|4578845|file|vector|||5.78||
+rmd_report|stem|a4c9fd35ecac4968|e0a1631e2271eebe|e23ffd575e8ab117|-234516627|manuscript/ProjectFisheries.pdf*manuscript/ProjectFisheries.Rmd|t18964.5627719243s|1d9f6ef73aa61294|1601505|file|vector|||5.51||

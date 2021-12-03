@@ -3,9 +3,9 @@ title: "__Project Fisheries - FRB Cesab training__"
 author: "Céline __Albert__,  Samuel __Charberet__, Lola __Gilbert__"
 date: "02/12/2021"
 output:
-  #pdf_document: default
+  pdf_document: default
   #html_document: default
-  ioslides_presentation: default
+  #ioslides_presentation: default
 
 #rmarkdown::render("manuscript/ProjectFisheries.Rmd", output_format = "ioslides_presentation", output_file = "presentation.html")
 ---
@@ -17,39 +17,26 @@ knitr::opts_chunk$set(echo = TRUE)
 The project is available on _[github](https://github.com/samuelcharberet/project.frb.fisheries)_
 
 ## 1. R work environment
-For this project we used:  
-
-<<<<<<< HEAD
-<div class="columns-2">
-
-=======
-* Git and Github for version control
->>>>>>> 39a07a8e547faabfcebb6f2c1f26963dfdbfd9dd
-* Targets to manage our workflow
-
-![](../analysis/Image/targets.png){width=25%}
-
-</div>
 
 <div class="columns-2">
 
-![](../analysis/Image/renv.png){width=32%}
+![](../analysis/Image/targets.png){width=25%} <br />
+`Targets` to manage our workflow  
 
-* renv to make our R environment reproducible  
+![](../analysis/Image/renv.png){width=28%}  <br />
+`renv` to make our R environment reproducible  
 
 </div>
-
+<br />
 <div class="columns-2">
 
-* Rmarkdown to generate both this presentation and a Latex report  
+![](../analysis/Image/rmarkdown.png){width=25%} <br />
+`rmarkdown` to generate both this presentation and a Latex report  
 
-![](../analysis/Image/rmarkdown.png){width=25%}
+![](../analysis/Image/ggplot.png){width=25%} <br />
+`ggplot2`  to visualize our data  
 
 </div>
-
-
-* ggplot2  to visualize our data
-
 
 ## 2. Question
 
@@ -69,14 +56,14 @@ How much carbon (C), nitrogen (N), and phosphorus (P) is extracted every year fr
 * __Tonnage__ from _Sea Around Us_ We downloaded data for the Barents Sea area on the Website:  https://www.seaaroundus.org/
 
 <center>
-![](../analysis/Image/sau.png){width=10%}
+![](../analysis/Image/sau.png){width=15%}
 </center>
 
 
 * __Taxonomic data__ from the Global Biodiveristy Information Facility (GBIF)
 
 <center>
-![](../analysis/Image/gbif.png){width=10%}
+![](../analysis/Image/gbif.png){width=15%}
 </center>
 
 ---
@@ -109,6 +96,12 @@ targets::tar_read(plot_CNP_exp)
 
 ```{r  echo=FALSE, fig.align="center"}
 targets::tar_read(plot_landedval_sp)
+```
+
+---
+
+```{r  echo=FALSE, fig.align="center"}
+targets::tar_read(plot_flanded_nb_countries)
 ```
 
 ## 4. Workflow 
