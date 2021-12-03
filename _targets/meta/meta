@@ -1,0 +1,11 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|iteration|parent|children|seconds|warnings|error
+clean_SAU|function|ecf34a30d6f0d0ea||||||||||||||
+merge_files|function|7c2393da117f206b||||||||||||||
+add_gbif_backbone_taxonomy|function|1abdb1a67200f6db||||||||||||||
+wrangling_ghs_data|function|20334896b94d9bd4||||||||||||||
+load_SAU|function|887a92aa587e342c||||||||||||||
+format_merged|function|c3060218a11fd93d||||||||||||||
+Graph_barplot_2|function|0dc6b1db58989fd3||||||||||||||
+add_taxo_sau|function|a8c55a6ceab0d05f||||||||||||||
+data_sau|stem|a7e0d40363ef4d17|60fe5189022d559d|ef46db3751d8e999|-1057251257|data/SAU_LME_20_v48_0_1/SAU_LME_20_v48_0.csv|t18963.3987652839s|f7d0ceee9c937b4e|21659375|file|vector|||0||
+SAU_taxo|stem||a2a2c04285f70ad8|303eac1d5c4292e0|356657583||t18964.3908425909s||0|rds|vector|||0.03||operator is invalid for atomic vectors
