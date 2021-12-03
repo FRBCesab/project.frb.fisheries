@@ -11,15 +11,15 @@ dat_merged|stem|d4326f5e3d8292e8|25ee7d3b527d4546|8b59b495ec4a5296|1607404680||t
 final_tibble|stem|69aabae1f672c2a6|2557a1e905a907ac|6706d14d8cad3e06|-721444567||t18964.4115976247s|e65efacdf0cc140e|446708|rds|vector|||0||
 Graph_barplot_2|function|f3d05af829f4a9fe||||||||||||||
 Graph_barplot_ton|function|ed8d032e5fe9de9e||||||||||||||
-plot_landedval_sp|stem|cc12cf3c793c8507|6125d852d38aaf0b|20ca0d7965d06c9c|1938145938||t18964.4439464106s|eaecb47ec23d58d7|1091736|rds|vector|||0.14||
+plot_landedval_sp|stem|dc294ec173e9ce6d|6125d852d38aaf0b|bb4ea09ed61ff578|1938145938||t18964.4776086879s|b58406ab7512fed5|1094386|rds|vector|||0.07||
 clean_SAU|function|f6d75d7c77364621||||||||||||||
 merge_files|function|6490c0f4de120bb5||||||||||||||
 add_gbif_backbone_taxonomy|function|1abdb1a67200f6db||||||||||||||
 wrangling_ghs_data|function|f60ea7acdac4a04d||||||||||||||
 load_SAU|function|c9a558d8522741e0||||||||||||||
 format_merged|function|a4ce6ce5682e03b0||||||||||||||
-graph_barplot_ton|function|14bc84313e3c8c25||||||||||||||
-graphCNP_export|function|5167316cdbd4797f||||||||||||||
+graph_barplot_ton|function|4166acce3ff2bba3||||||||||||||
+graphCNP_export|function|9bf9e3bf0cfba285||||||||||||||
 add_taxo_sau|function|a8c55a6ceab0d05f||||||||||||||
-plot_CNP_exp|stem|941d9cfaf7443989|0c3532631b1b13f2|f40e81799739190d|-356950905||t18964.4526656184s|113100edd2de2240|1561405|rds|vector|||0.09||
-rmd_report|stem||9ba9e8451847aa02|46f7c84d93ecb341|-234516627||t18964.4531037094s||0|file|vector|||37.81|CreateProcess a échoué au lancement de C\Users\lgilbe01\AppData\Roaming\TinyTeX\bin\win32\pdflatex.exe haltonerror interactionbatchmode ProjectFisheries.tex|LaTeX failed to compile ProjectFisheries.tex. See httpsyihui.orgtinytexrdebugging for debugging tips.
+plot_CNP_exp|stem|47dff53c59824dde|0c3532631b1b13f2|b12044b7ba023bc5|-356950905||t18964.4808425762s|ae4cf9cddcb9cb38|1558624|rds|vector|||0.19||
+rmd_report|stem||9ba9e8451847aa02|2ea8347fb8d1f0e9|-234516627||t18964.4531037094s||0|file|vector|||26.56|CreateProcess a échoué au lancement de C\Users\lgilbe01\AppData\Roaming\TinyTeX\bin\win32\pdflatex.exe haltonerror interactionbatchmode ProjectFisheries.tex|LaTeX failed to compile ProjectFisheries.tex. See httpsyihui.orgtinytexrdebugging for debugging tips.
