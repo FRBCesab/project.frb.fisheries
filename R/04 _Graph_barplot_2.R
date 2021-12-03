@@ -18,6 +18,6 @@ Graph_barplot_2 <- function(NorwayUKRussia) {
           strip.background=element_rect(colour="grey90", fill="grey95"),
           axis.title.y = element_text(size = 9, face = "bold"),
           axis.text.y = element_text(size=9))+
-    scale_fill_manual(name = "Species", values=c("#999999", "#E69F00", "#56B4E9", "black"))+
+    #scale_fill_manual(name = "Species", )+
     facet_wrap(.~fishing_entity, nrow = 3)
 }

@@ -35,8 +35,8 @@ list(
   # merge both datasets
   tar_target(dat_merged, merge_files(SAU_taxo, GHS_taxo)),
   # complete calculation of C, N, P
-  tar_target(final_tibble, format_merged(dat_merged))
+  tar_target(final_tibble, format_merged(dat_merged)),
   # make plots
-  #tar_target(plot_landedvalue_species, Graph_barplot_2),
+  tar_target(plot_landedval_sp, Graph_barplot_2(final_tibble))
   #explore the data (custom function)
 )
