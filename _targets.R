@@ -39,7 +39,7 @@ list(
   # make plots
   tar_target(plot_landedval_sp, graph_barplot_ton(final_tibble)),
   tar_target(plot_CNP_exp, graphCNP_export(final_tibble)),
-  tar_target(plot_flanded_nb_countris, graphton_nb_countries(final_tibble)),
+  tar_target(plot_flanded_nb_countries, graphton_nb_countries(final_tibble)),
   # generate report Rmd
   tarchetypes::tar_render(rmd_report, "manuscript/ProjectFisheries.Rmd")
 )
