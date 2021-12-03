@@ -46,3 +46,6 @@ clean_SAU <- function(data_tibble) {
 
     SAU_clean
 }
+
+renv::restore()
+
