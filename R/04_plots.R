@@ -1,15 +1,21 @@
 ###########################################
 #
 #
-#file name = graph1.r
+#file name = 04_plots.R
 #
-#graph with species _ Landed values
+#functions generating graphs
 ###########################################
-
-Graph_barplot_2 <- function(NorwayUKRussia) {
-  ggplot(NorwayUKRussia,aes(year, landed_value, fill=common_name)) +
+graph_barplot_ton <- function(tibble) {
+  # filter on countries, we want just Norway UK and Russia
+  tibble %>%
+    dplyr::filter(fishing_entity %in% c("Russian Federation",
+                                        "Norway",
+                                        "United Kingdom")) %>%
+    ggplot() +
+    aes(year, landed_value, fill = scientific_name) +
     geom_bar(stat = "identity")+
-    ylab ("Landed value")+xlab ("Year")+
+    ylab ("Landed value (tons)") +
+    xlab ("Year")+
     theme(panel.background = element_rect(fill = "white", colour = "white"),
           panel.grid.major = element_line(size = 0.5, linetype = 'solid', colour = "grey95"),
           panel.grid.minor = element_line(size = 0.25, linetype = 'solid', colour = "white"),
@@ -18,8 +24,8 @@ Graph_barplot_2 <- function(NorwayUKRussia) {
           strip.background=element_rect(colour="grey90", fill="grey95"),
           axis.title.y = element_text(size = 9, face = "bold"),
           axis.text.y = element_text(size=9))+
-    #scale_fill_manual(name = "Species", )+
-    facet_wrap(.~fishing_entity, nrow = 3)
+    ghibli::scale_fill_ghibli_d(name = "PonyoMedium", direction = - 1) +
+    facet_wrap(.~ fishing_entity, nrow = 3)
 }
 
 
@@ -37,5 +43,6 @@ graphCNP_export <- function(data) {
     ggplot() +
     aes(x = year, y = tonnage, fill = nut_exp) +
     geom_col() +
-    facet_wrap(~ nut_exp)
+    facet_wrap(~ nut_exp) +
+    ghibli::scale_fill_ghibli_d(name = "MononokeMedium", direction = -1)
 }
