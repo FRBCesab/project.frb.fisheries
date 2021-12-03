@@ -17,8 +17,10 @@ list(
   tar_target(data_sau, load_SAU()), # Sea Around us data
   tar_target(data_ghs, wrangle_ghs_data()), # CNP data
   # update taxo on SAU and data with taxonomy data
-  tar_target(SAU_taxo, add_gbif_backbone_taxonomy(data_sau)),
-  tar_target(GHS_taxo, add_gbif_backbone_taxonomy(data_ghs)),
+  tar_target(SAU_taxo, add_taxo_sau(data_sau)),
+  tar_target(GHS_taxo, add_gbif_backbone_taxonomy(
+    dataframe = data_ghs,
+    speciescolumn = "scientific_name")),
   # merge both datasets
   tar_target(dat_merged, merge_files(SAU_taxo, GHS_taxo)),
   # complete calculation of C, N, P
