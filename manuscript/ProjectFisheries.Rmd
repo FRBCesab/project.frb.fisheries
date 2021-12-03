@@ -3,8 +3,8 @@ title: "__Project Fisheries - FRB Cesab training__"
 author: "Céline __Albert__,  Samuel __Charberet__, Lola __Gilbert__"
 date: "02/12/2021"
 output:
-  pdf_document: default
-  html_document: default
+  #pdf_document: default
+  #html_document: default
   ioslides_presentation: default
 
 #rmarkdown::render("manuscript/ProjectFisheries.Rmd", output_format = "ioslides_presentation", output_file = "presentation.html")
@@ -25,31 +25,32 @@ For this project we used:
 * Rmarkdown to generate both this presentation and a Latex report
 * ggplot2  to visualize our data
 
-<<<<<<< HEAD
 
 ## 2. Question
 
 How much carbon (C), nitrogen (N), and phosphorus (P) is exctracted every year from the Barents Sea through fishing ?
 
-## 3. Data
-### 3.1. Data extracted  
+<center>
+![](../analysis/Image/map.png){width=60%}
+<center>
 
-=======
+
 ## 2. Data
 ### 2.1. Data extracted  
----
+
 * __Carbone (C), Nitrogen (N), Phosphorus (P)__ content (% of dry mass) from Jabot, F. et al., (2020): Dataset for the article "Body stoichiometry of heterotrophs: assessing drivers of interspecific variations in elemental composition". figshare. Dataset. https://doi.org/10.6084/m9.figshare.13366310.v1  
----
+
 * __Tonnage__ from _Sea Around Us_ We downloaded data for the Barents Sea area on the Website:  https://www.seaaroundus.org/
 
 * __Taxonomic data__ from the Global Biodiveristy Information Facility (GBIF)
 
-### 3.2. Data manipulation  
+---
+### 2.2. Data manipulation  
 
-Having two different dataset has required to join them. However, the species name were not exactly noted the same way on the two documents. Therefore we had to do some cleaning/filetering on both datasets. 
+Having two different dataset has required to join them. However, the species name were not exactly noted the same way on the two documents. Therefore we had to do some cleaning/filetering on both datasets.
 
 
-### 3.3. Final dataset  
+### 2.3. Final dataset  
 
 Our final dataset contains:  
 * Carbone (C)  
@@ -60,16 +61,20 @@ Our final dataset contains:
 * Countries  
 * Type of gear  
 
-## 4. Analyses and vizualisation
+## 3. Analyses and vizualisation
 
-### Representation of ...
-```{r  echo=FALSE}
+### Representation of our results
+```{r  echo=FALSE, fig.align="center"}
 targets::tar_read(plot_CNP_exp)
 
 ```
 
+
+## 4. Workflow 
+
+### vizualisation of tar_visnetwork
 ```{r  echo=FALSE}
-#tar_load()
+targets::tar_visnetwork()
 
 ```
 
@@ -79,6 +84,5 @@ targets::tar_read(plot_CNP_exp)
 ```
 
 
-## 5. Bibliography
 
 
