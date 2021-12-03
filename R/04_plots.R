@@ -63,3 +63,28 @@ graphCNP_export <- function(data) {
           axis.text.y = element_text(size=9),
           legend.position = "none")
 }
+
+#' @title Create graph f(total_tonnage) = nb_countries
+#'
+#'
+#'
+#' @return ggplot object
+graphton_nb_countries <- function(data) {
+  data %>%
+    dplyr::group_by(year) %>%
+    dplyr::summarize(ton_tot = sum(landed_value),
+                     nb_countries = length(unique(fishing_entity))) %>%
+    ggplot() +
+    aes(x = nb_countries, y = ton_tot) +
+    geom_point() +
+    xlab("Nb of countries fishing in the Barents Sea") + ylab("Total tonnage (tons)") +
+    theme(panel.background = element_rect(fill = "white", colour = "white"),
+          panel.grid.major = element_line(size = 0.5, linetype = 'solid', colour = "grey95"),
+          panel.grid.minor = element_line(size = 0.25, linetype = 'solid', colour = "white"),
+          axis.title.x = element_text(size = 9, face = "bold"),
+          axis.text.x = element_text(size=9, angle = 60, hjust=1),
+          strip.background=element_rect(colour="grey90", fill="grey95"),
+          axis.title.y = element_text(size = 9, face = "bold"),
+          axis.text.y = element_text(size=9),
+          legend.position = "none")
+}
