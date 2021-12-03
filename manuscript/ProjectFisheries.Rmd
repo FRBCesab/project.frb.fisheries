@@ -25,6 +25,16 @@ For this project we used:
 * Rmarkdown to generate both this presentation and a Latex report
 * ggplot2  to visualize our data
 
+<<<<<<< HEAD
+
+## 2. Question
+
+How much carbon (C), nitrogen (N), and phosphorus (P) is exctracted every year from the Barents Sea through fishing ?
+
+## 3. Data
+### 3.1. Data extracted  
+
+=======
 ## 2. Data
 ### 2.1. Data extracted  
 ---
@@ -34,12 +44,12 @@ For this project we used:
 
 * __Taxonomic data__ from the Global Biodiveristy Information Facility (GBIF)
 
-### 2.2. Data manipulation  
+### 3.2. Data manipulation  
 
 Having two different dataset has required to join them. However, the species name were not exactly noted the same way on the two documents. Therefore we had to do some cleaning/filetering on both datasets. 
 
 
-### 2.3. Final dataset  
+### 3.3. Final dataset  
 
 Our final dataset contains:  
 * Carbone (C)  
@@ -50,7 +60,7 @@ Our final dataset contains:
 * Countries  
 * Type of gear  
 
-## 3. Analyses and vizualisation
+## 4. Analyses and vizualisation
 
 ### Representation of ...
 ```{r  echo=FALSE}
@@ -69,6 +79,6 @@ targets::tar_read(plot_CNP_exp)
 ```
 
 
-## 4. Bibliography
+## 5. Bibliography
 
 
