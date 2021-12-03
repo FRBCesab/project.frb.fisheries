@@ -46,9 +46,20 @@ Our final dataset contains:
 
 ## 3. Analyses and vizualisation
 
+### Representation of ...
+```{r  echo=FALSE}
+#tar_load()
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```
+
+```{r  echo=FALSE}
+#tar_load()
+
+```
+
+```{r  echo=FALSE}
+#tar_load()
+
 ```
 
 
