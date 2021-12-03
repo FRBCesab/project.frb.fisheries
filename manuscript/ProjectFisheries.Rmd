@@ -3,9 +3,9 @@ title: "__Project Fisheries - FRB Cesab training__"
 author: "Céline __Albert__,  Samuel __Charberet__, Lola __Gilbert__"
 date: "02/12/2021"
 output:
-  pdf_document: default
+  #pdf_document: default
   #html_document: default
-  #ioslides_presentation: default
+  ioslides_presentation: default
 
 #rmarkdown::render("manuscript/ProjectFisheries.Rmd", output_format = "ioslides_presentation", output_file = "presentation.html")
 ---
