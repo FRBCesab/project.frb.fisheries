@@ -66,7 +66,6 @@ Our final dataset contains:
 ### Representation of our results
 ```{r  echo=FALSE, fig.align="center"}
 targets::tar_read(plot_CNP_exp)
-
 ```
 
 
@@ -78,10 +77,6 @@ targets::tar_read(plot_CNP_exp)
 ![](../analysis/Image/Tar_Vizualisation.png){width=80%}
 <center>
 
-```{r  echo=FALSE}
-#tar_load()
-
-```
 
 
 
