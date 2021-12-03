@@ -3,8 +3,8 @@ title: "__Project Fisheries - FRB Cesab training__"
 author: "Céline __Albert__,  Samuel __Charberet__, Lola __Gilbert__"
 date: "02/12/2021"
 output:
-  pdf_document: default
-  html_document: default
+  #pdf_document: default
+  #html_document: default
   ioslides_presentation: default
 
 #rmarkdown::render("manuscript/ProjectFisheries.Rmd", output_format = "ioslides_presentation", output_file = "presentation.html")
@@ -17,22 +17,47 @@ knitr::opts_chunk$set(echo = TRUE)
 The project is available on _[github](https://github.com/samuelcharberet/project.frb.fisheries)_
 
 ## 1. R work environment
-
 For this project we used:  
 
+<<<<<<< HEAD
+<div class="columns-2">
+
+=======
+* Git and Github for version control
+>>>>>>> 39a07a8e547faabfcebb6f2c1f26963dfdbfd9dd
 * Targets to manage our workflow
-* renv to make our R environment reproducible
-* Rmarkdown to generate both this presentation and a Latex report
+
+![](../analysis/Image/targets.png){width=25%}
+
+</div>
+
+<div class="columns-2">
+
+![](../analysis/Image/renv.png){width=32%}
+
+* renv to make our R environment reproducible  
+
+</div>
+
+<div class="columns-2">
+
+* Rmarkdown to generate both this presentation and a Latex report  
+
+![](../analysis/Image/rmarkdown.png){width=25%}
+
+</div>
+
+
 * ggplot2  to visualize our data
 
 
 ## 2. Question
 
-How much carbon (C), nitrogen (N), and phosphorus (P) is exctracted every year from the Barents Sea through fishing ?
+How much carbon (C), nitrogen (N), and phosphorus (P) is extracted every year from the Barents Sea through fishing ?
 
 <center>
 ![](../analysis/Image/map.png){width=60%}
-<center>
+</center>
 
 
 ## 2. Data
@@ -40,14 +65,25 @@ How much carbon (C), nitrogen (N), and phosphorus (P) is exctracted every year f
 
 * __Carbone (C), Nitrogen (N), Phosphorus (P)__ content (% of dry mass) from Jabot, F. et al., (2020): Dataset for the article "Body stoichiometry of heterotrophs: assessing drivers of interspecific variations in elemental composition". figshare. Dataset. https://doi.org/10.6084/m9.figshare.13366310.v1  
 
+
 * __Tonnage__ from _Sea Around Us_ We downloaded data for the Barents Sea area on the Website:  https://www.seaaroundus.org/
+
+<center>
+![](../analysis/Image/sau.png){width=10%}
+</center>
+
 
 * __Taxonomic data__ from the Global Biodiveristy Information Facility (GBIF)
 
+<center>
+![](../analysis/Image/gbif.png){width=10%}
+</center>
+
 ---
+
 ### 2.2. Data manipulation  
 
-Having two different dataset has required to join them. However, the species name were not exactly noted the same way on the two documents. Therefore we had to do some cleaning/filetering on both datasets.
+Having two different dataset has required to join them. However, the species name were not exactly noted the same way on the two documents. Therefore we had to do some cleaning on both datasets.
 
 
 ### 2.3. Final dataset  
@@ -61,6 +97,7 @@ Our final dataset contains:
 * Countries  
 * Type of gear  
 
+
 ## 3. Analyses and vizualisation
 
 ### Representation of our results
@@ -68,6 +105,11 @@ Our final dataset contains:
 targets::tar_read(plot_CNP_exp)
 ```
 
+---
+
+```{r  echo=FALSE, fig.align="center"}
+targets::tar_read(plot_landedval_sp)
+```
 
 ## 4. Workflow 
 
