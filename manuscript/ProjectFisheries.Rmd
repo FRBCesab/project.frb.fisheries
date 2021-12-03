@@ -30,7 +30,10 @@ For this project we used:
 
 How much carbon (C), nitrogen (N), and phosphorus (P) is exctracted every year from the Barents Sea through fishing ?
 
-![](../analysis/Image/map.png)
+<center>
+![](../analysis/Image/map.png){width=60%}
+<center>
+
 
 ## 2. Data
 ### 2.1. Data extracted  
@@ -60,14 +63,18 @@ Our final dataset contains:
 
 ## 3. Analyses and vizualisation
 
-### Representation of ...
-```{r  echo=FALSE}
+### Representation of our results
+```{r  echo=FALSE, fig.align="center"}
 targets::tar_read(plot_CNP_exp)
 
 ```
 
+
+## 4. Workflow 
+
+### vizualisation of tar_visnetwork
 ```{r  echo=FALSE}
-#tar_load()
+targets::tar_visnetwork()
 
 ```
 
