@@ -54,7 +54,7 @@ Our final dataset contains:
 
 ### Representation of ...
 ```{r  echo=FALSE}
-#tar_load()
+targets::tar_read(plot_CNP_exp)
 
 ```
 
