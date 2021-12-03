@@ -29,13 +29,18 @@ merge_files <- function(tibble_SAU, tibble_CNP) {
 #' @return unique tibble to work on, with tonnage and equivalent
 #'     export in C, N,P
 format_merged <- function(tibble_merged) {
+<<<<<<< HEAD
   data <- tibble_merged %>%
     dplyr::mutate(# convert % dry mass means into dry weight concentrations
+=======
+  data <- tibble_merged |>
+    dplyr::mutate(# convert % dry mass means into wet weight concentrations
+>>>>>>> 6b40eeae59e1fbb0296e0b3e58d107de32969950
                   # with a 80% water content
                   # unit g/ton
-                  c_g_per_t = (c_mean/5)*1e-2,
-                  n_g_per_t = (n_mean/5)*1e-2,
-                  p_g_per_t = (p_mean/5)*1e-2,
+                  c_g_per_t = (c_mean/5)*1e4,
+                  n_g_per_t = (n_mean/5)*1e4,
+                  p_g_per_t = (p_mean/5)*1e4,
                   # compute equivalent export of C, N, P, in tons
                   C_tonnage = c_g_per_t*landed_value*1e-6,
                   N_tonnage = n_g_per_t*landed_value*1e-6,
