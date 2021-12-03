@@ -20,6 +20,7 @@ The project is available on _[github](https://github.com/samuelcharberet/project
 
 For this project we used:  
 
+* Git and Github for version control
 * Targets to manage our workflow
 * renv to make our R environment reproducible
 * Rmarkdown to generate both this presentation and a Latex report
