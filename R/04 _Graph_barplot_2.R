@@ -21,3 +21,21 @@ Graph_barplot_2 <- function(NorwayUKRussia) {
     #scale_fill_manual(name = "Species", )+
     facet_wrap(.~fishing_entity, nrow = 3)
 }
+
+
+
+#' @title Create graph of C, N, P export
+#'
+#'
+#'
+#' @return ggplot object
+graphCNP_export <- function(data) {
+  data %>%
+    pivot_longer(cols = c(C_tonnage, N_tonnage, P_tonnage),
+                 names_to = "nut_exp",
+                 values_to = "tonnage") %>%
+    ggplot() +
+    aes(x = year, y = tonnage, fill = nut_exp) +
+    geom_col() +
+    facet_wrap(~ nut_exp)
+}
