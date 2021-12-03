@@ -76,29 +76,32 @@ Having two different dataset has required to join them. However, the species nam
 ### 2.3. Final dataset  
 
 Our final dataset contains:  
-* Carbone (C)  
-* Nitrogen (N)  
-* Phosphorus (P)  
-* Species (n species of fishes)  
-* Tonnage  
-* Countries  
-* Type of gear  
+- Carbon (C)  
+- Nitrogen (N)  
+- Phosphorus (P)  
+- Species (n species of fishes)  
+- Tonnage  
+- Countries  
+- Type of gear  
 
 
 ## 3. Analyses and vizualisation
 
-### Representation of our results
+### C, N, P data
 ```{r  echo=FALSE, fig.align="center"}
 targets::tar_read(plot_CNP_exp)
 ```
 
 ---
 
+### Important counrty catch data
+
 ```{r  echo=FALSE, fig.align="center"}
 targets::tar_read(plot_landedval_sp)
 ```
 
 ---
+### A surprising plot
 
 ```{r  echo=FALSE, fig.align="center"}
 targets::tar_read(plot_flanded_nb_countries)
