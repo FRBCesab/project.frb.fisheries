@@ -18,7 +18,7 @@ merge_files <- function(tibble_SAU, tibble_CNP) {
     dplyr::left_join(tibble_CNP, by = "scientific_name") %>%
     dplyr::filter(!is.na(c_mean))
 
-  data
+  return(data)
 }
 
 
@@ -42,6 +42,6 @@ format_merged <- function(tibble_merged) {
                   P_tonnage = p_g_per_t*landed_value*1e-6,
                   )
 
-  data
+  return(data)
 }
 

@@ -88,6 +88,6 @@ wrangling_ghs_data <- function () {
                   c_mean, n_mean, p_mean,
                   cn_ratio, cp_ratio, np_ratio)
 
-  ghs_data_aggregated
+  return(ghs_data_aggregated)
 
 }
