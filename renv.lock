@@ -1146,6 +1146,13 @@
       "Repository": "CRAN",
       "Hash": "b227d13e29222b4574486cfcbde077fa"
     },
+    "tarchetypes": {
+      "Package": "tarchetypes",
+      "Version": "0.3.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "d58730fa1d36807c7882a74101bf437e"
+    },
     "targets": {
       "Package": "targets",
       "Version": "0.8.1",
