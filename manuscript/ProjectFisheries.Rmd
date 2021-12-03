@@ -19,8 +19,12 @@ The project is available on _[github](https://github.com/samuelcharberet/project
 ## 1. R work environment
 For this project we used:  
 
+<<<<<<< HEAD
 <div class="columns-2">
 
+=======
+* Git and Github for version control
+>>>>>>> 39a07a8e547faabfcebb6f2c1f26963dfdbfd9dd
 * Targets to manage our workflow
 
 ![](../analysis/Image/targets.png){width=25%}
