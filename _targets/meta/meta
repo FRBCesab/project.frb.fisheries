@@ -13,7 +13,6 @@ dat_merged|stem|d4326f5e3d8292e8|25ee7d3b527d4546|8b59b495ec4a5296|1607404680||t
 final_tibble|stem|69aabae1f672c2a6|2557a1e905a907ac|6706d14d8cad3e06|-721444567||t18964.4169417256s|e65efacdf0cc140e|446708|rds|vector|||0||
 plot_landedval_sp|stem|3aab396fb20353ff|6125d852d38aaf0b|bb4ea09ed61ff578|1938145938||t18964.5108892678s|7178ae289abaa380|1094388|rds|vector|||0.03||
 plot_CNP_exp|stem|6a8307466ba55d54|0c3532631b1b13f2|b12044b7ba023bc5|-356950905||t18964.510903041s|7cbb34ddde2b39fd|1558622|rds|vector|||0.05||
-rmd_report|stem|79b86b788bca5918|9ba9e8451847aa02|aea45ab5bba3460e|-234516627|manuscript/ProjectFisheries.html*manuscript/ProjectFisheries.Rmd|t18964.5115668067s|04e26dd939638b9f|4428237|file|vector|||4.29||
 clean_SAU|function|f6d75d7c77364621||||||||||||||
 merge_files|function|6490c0f4de120bb5||||||||||||||
 add_gbif_backbone_taxonomy|function|1abdb1a67200f6db||||||||||||||
@@ -23,3 +22,4 @@ format_merged|function|a4ce6ce5682e03b0||||||||||||||
 graph_barplot_ton|function|4166acce3ff2bba3||||||||||||||
 graphCNP_export|function|9bf9e3bf0cfba285||||||||||||||
 add_taxo_sau|function|a8c55a6ceab0d05f||||||||||||||
+rmd_report|stem|88a48421e942a2e3|9ba9e8451847aa02|aea45ab5bba3460e|-234516627|manuscript/ProjectFisheries.pdf*manuscript/ProjectFisheries.Rmd|t18964.5154328935s|a992bc2a71d99a04|1446415|file|vector|||5.15||
