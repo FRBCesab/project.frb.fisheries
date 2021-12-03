@@ -58,6 +58,13 @@
       "Repository": "CRAN",
       "Hash": "e031418365a7f7a766181ab5a41a5716"
     },
+    "RCurl": {
+      "Package": "RCurl",
+      "Version": "1.98-1.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "5cc50d9d40a284cb8b1c8604901acf89"
+    },
     "Rcpp": {
       "Package": "Rcpp",
       "Version": "1.0.7",
@@ -142,6 +149,13 @@
       "Repository": "CRAN",
       "Hash": "9fe98599ca456d6552421db0d6772d8f"
     },
+    "bitops": {
+      "Package": "bitops",
+      "Version": "1.0-7",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "b7d8d8ee39869c18d8846a184dd8a1af"
+    },
     "blob": {
       "Package": "blob",
       "Version": "1.2.2",
@@ -155,6 +169,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "270c305e57f4fa2a97141753e585ec20"
+    },
+    "bookdown": {
+      "Package": "bookdown",
+      "Version": "0.24",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "3837766a1e1b527af25fa3e2d12a2800"
     },
     "brew": {
       "Package": "brew",
@@ -463,6 +484,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "39e3667c4d972a0d3e2ae818aeafab7b"
+    },
+    "git2r": {
+      "Package": "git2r",
+      "Version": "0.29.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "b114135c4749076bd5ef74a5827b6f62"
     },
     "gitcreds": {
       "Package": "gitcreds",
@@ -1023,6 +1051,18 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "55d1e670be93862f48f0c4f645516d7c"
+    },
+    "rrtools": {
+      "Package": "rrtools",
+      "Version": "0.1.5",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "benmarwick",
+      "RemoteRepo": "rrtools",
+      "RemoteRef": "master",
+      "RemoteSha": "3f830bce55e733f17e599a632a4e930ee82b8edb",
+      "Hash": "7c27c3bbc9d1072c0f3b544a9bcfd048"
     },
     "rstudioapi": {
       "Package": "rstudioapi",
