@@ -29,7 +29,7 @@ merge_files <- function(tibble_SAU, tibble_CNP) {
 #' @return unique tibble to work on, with tonnage and equivalent
 #'     export in C, N,P
 format_merged <- function(tibble_merged) {
-  data <- tibble_merged |>
+  data <- tibble_merged %>%
     dplyr::mutate(# convert % dry mass means into dry weight concentrations
                   # with a 80% water content
                   # unit g/ton
