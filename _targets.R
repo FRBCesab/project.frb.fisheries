@@ -20,15 +20,11 @@ list(
   tar_target(SAU_taxo, add_gbif_backbone_taxonomy(data_sau)),
   tar_target(GHS_taxo, add_gbif_backbone_taxonomy(data_ghs)),
   # merge both datasets
-<<<<<<< HEAD
-  tar_target(hist, create_plot(data)),
-=======
   tar_target(dat_merged, merge_files(SAU_taxo, GHS_taxo)),
   # complete calculation of C, N, P
   tar_target(final_tibble, format_merged(dat_merged)),
   # make plots
   tar_target(plot_landedvalue_species, Graph_barplot_2),
   #explore the data (custom function)
-  #tar_target(fit, lm(Ozone ~ Wind + Temp, data)) #model the data
->>>>>>> 6b40eeae59e1fbb0296e0b3e58d107de32969950
+
 )
